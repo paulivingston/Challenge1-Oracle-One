@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(27, 21, 29);
+    background-size: cover;
+    font-family: "Oxygen-Regular";
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+}
+
+.main {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    height: 90%;
+    margin: 5% 0;
+}
+
+.titulo {
+    padding: 15px;
+    width: 100vw;
+    margin: 50px 0px;
+    color: lavender;
+    text-align: center;
+    font-size: 6vw;
+}
+
+.box {
+  padding: 10px;
+  margin: 0 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgba(190, 164, 201, 0.664);
+  border-radius: 0.5em;
+  width: 30vw;
+  height: auto;
+  display: grid;
+  grid-template-rows: 25% 50% 25%;
+}
+
+.div_label {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.div_buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+  border: 0;
+  color: lavender;
+  font-weight: bold;
+  background-color: purple;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 0.5em;
+  width: 40%;
+  height: 60%;
+}
+
+.text-input {
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 0.5em;
+  width: 100%;
+  height: 90%;  
+}
+
+.footer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.copyright {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 80%;
+    color: lavender;
+}
+
+a {
+    color: rgb(151, 85, 182);
+}
+
+@media all and (min-width:650px) and (max-width:1150px){
+
+    body {
+        grid-template-rows: 15% 80% 5%;
+    }
+
+    .titulo {
+        margin: 0;
+        padding-top: 25px;
+        font-size: 5vw;
+    }
+
+    .main {
+        display: grid;
+        grid-template-rows: 47% 47%;
+        grid-template-columns: 80%;
+        gap: 6%;
+        margin: 15px 0;
+    }
+
+    .msg{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 37% 37% 26%;
+        grid-template-rows: 34% 33% 33%;
+        grid-template-areas:    "label label label"
+                                "input input buttons"
+                                "input input buttons";    
+    }
+
+    .div_label {
+        grid-area: label;   
+        font-size: 85%;
+    }
+
+    .div_input {
+        grid-area: input;
+        padding: 5px;
+    }
+
+    .div_buttons {
+        grid-area: buttons;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        padding-left: 15px;
+        padding-bottom: 5px;
+    }
+
+    .btn{
+        height: 30%;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media all and (max-width:649px){
+    body {
+        grid-template-rows: 15% 80% 5%;
+    }
+
+    .titulo {
+        margin: 0;
+        padding-top: 25px;
+        font-size: 5vw;
+    }
+
+    .main {
+        display: grid;
+        grid-template-rows: 47% 47%;
+        grid-template-columns: 80%;
+        gap: 6%;
+        margin: 15px 0;
+    }
+
+    .msg{
+        width: 100%;   
+    }
+
+    .div_label {
+        font-size: 75%;
+    }
+
+    .div_input {
+        padding: 5px;
+    }
+
+    .div_buttons {
+        padding: 0 5px 5px 5px;
+        gap: 30px;
+    }
+
+    .btn{
+        height: 90%;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #btn-copy  {
+        width: 46%;
+    }
+}
+
+
+
+@font-face {
+    font-family: "Oxygen-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Oxygen/Oxygen-Regular.ttf');
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La Encriptadora</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="img/icon.png">
+    </head>
+    <body>
+        <header>
+            <h1 class="titulo">La Encriptadora</h1>
+        </header>
+        <main class="main">
+            <section class="msg box">
+                <div class="div_label">
+                    <h2>Ingrese su mensaje:</h2>
+                    <label for="input-texto">(Solo letras minúsculas, sin tildes)</label>
+                </div>
+                <div class="div_input">
+                    <textarea class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui"></textarea>
+                </div>
+                <div class="div_buttons">
+                    <button class="btn" onclick="encriptarMsg()" id="btn-encriptar">Encriptar</button>
+                    <button class="btn" onclick="desencriptarMsg()" id="btn-desencriptar">Desencriptar</button>
+                </div>
+            </section>
+        
+            <section class="msg box">
+            <div class="div_label">
+                <h2 id="">Mensaje encriptado:</h2>
+            </div>
+            <div class="div_input">
+                <textarea class="text-input" type="text" id="msg"></textarea>
+            </div>
+            <div class="div_buttons">
+                <button class="btn" onclick="copy()" id="btn-copy">Copiar</button>
+            </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <h3 class="copyright">Developed by Paula Livingston - Contact: <a target="_blank" href="mailto:pau.livingston@gmail.com">pau.livingston@gmail.com</h3>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>
