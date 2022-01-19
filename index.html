@@ -14,34 +14,36 @@
         </header>
         <main class="main">
             <section class="msg box">
-                <div class="div_label">
-                    <h2>Ingrese su mensaje:</h2>
-                    <label for="input-texto">(Solo letras minúsculas, sin tildes)</label>
+                <div class="div-input">
+                    <div class="div-label">
+                        <h2 id="label-input">Ingrese su mensaje:</h2>
+                        <label for="input-texto">(Solo letras minúsculas, sin tildes)</label>
+                    </div>
+                    <textarea class="text-input" name="input-text" id="input-text" placeholder="Ingrese el texto aqui"></textarea>
                 </div>
-                <div class="div_input">
-                    <textarea class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui"></textarea>
-                </div>
-                <div class="div_buttons">
-                    <button class="btn" onclick="encriptarMsg()" id="btn-encriptar">Encriptar</button>
-                    <button class="btn" onclick="desencriptarMsg()" id="btn-desencriptar">Desencriptar</button>
+                <div class="div-buttons">
+                    <button class="btn" onclick="encryptMsg()" id="btn-encriptar">Encriptar</button>
+                    <button class="btn" onclick="decryptMsg()" id="btn-desencriptar">Desencriptar</button>
                 </div>
             </section>
         
             <section class="msg box">
-            <div class="div_label">
-                <h2 id="">Mensaje encriptado:</h2>
+            <div class="div-input">
+                <div class="div-label">
+                    <h2 id="label-result">Mensaje encriptado:</h2>
+                </div>    
+                <textarea class="text-input" name="output-text" id="output-text"></textarea>
             </div>
-            <div class="div_input">
-                <textarea class="text-input" type="text" id="msg"></textarea>
-            </div>
-            <div class="div_buttons">
+            <div class="div-buttons">
                 <button class="btn" onclick="copy()" id="btn-copy">Copiar</button>
             </div>
             </section>
         </main>
         <footer class="footer">
-            <h3 class="copyright">Developed by Paula Livingston - Contact: <a target="_blank" href="mailto:pau.livingston@gmail.com">pau.livingston@gmail.com</h3>
+            <h3 class="copyright">Developed by Paula Livingston - Contact: <a target="_blank" href="mailto:pau.livingston@gmail.com">pau.livingston@gmail.com</a></h3>
         </footer>
         <script src="main.js"></script>
+
     </body>
+
 </html>

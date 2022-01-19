@@ -1,27 +1,17 @@
+function encryptMsg() {
+    console.time('timerName');
+    let encrypted = document.getElementById("input-text").value;
+    document.getElementById("input-text").value = "";
 
+    encrypted = encrypted.replace(/e/g, "enter");
+    encrypted = encrypted.replace(/i/g, "imes");
+    encrypted = encrypted.replace(/a/g, "ai");
+    encrypted = encrypted.replace(/o/g, "ober");
+    encrypted = encrypted.replace(/u/g, "ufat");
 
-
-function encriptarMsg() {
-    var mensaje = document.getElementById("input-texto").value;
-    document.getElementById("input-texto").value = "";
-    var encMsg = mensaje.split('');
-    for(var i=0; i<=encMsg.length; i++) {
-        if(encMsg[i]=="a") {
-            encMsg[i] = "ai";
-        }else if(encMsg[i]=="e"){
-            encMsg[i] = "enter";
-        }else if(encMsg[i]=="i"){
-            encMsg[i] = "imes";
-        }else if(encMsg[i]=="o"){
-            encMsg[i] = "ober";
-        }else if(encMsg[i]=="u"){
-            encMsg[i] = "ufat";
-        } 
-    }
-    mensaje = encMsg.join('')
-    document.getElementById("msg").value = mensaje;
+    document.getElementById("output-text").value = encrypted;
+    console.timeEnd('timerName');
 }
-
 
 /* Reglas de encriptación: 
 "e" es convertido para "enter" 
@@ -33,35 +23,17 @@ Solo letras minusculas
 No se permite acentuación de palabras 
 */
 
-function desencriptarMsg() {
-    var mensaje = document.getElementById("input-texto").value;
-    document.getElementById("input-texto").value = "";
-    var encMsg = mensaje.split('');
-    for(var i=0; i<=encMsg.length; i++) {
-        var test = encMsg[i]+encMsg[i+1]+encMsg[i+2]+encMsg[i+3];
-        if(encMsg[i]+encMsg[i+1]=="ai") {
-            encMsg[i+1] = "";
-        }else if(test+encMsg[i+4]=="enter"){
-            encMsg[i+1] = "";
-            encMsg[i+2] = "";
-            encMsg[i+3] = "";
-            encMsg[i+4] = "";
-        }else if(test=="imes"){
-            encMsg[i+1] = "";
-            encMsg[i+2] = "";
-            encMsg[i+3] = "";
-        }else if(test=="ober"){
-            encMsg[i+1] = "";
-            encMsg[i+2] = "";
-            encMsg[i+3] = "";
-        }else if(test=="ufat"){
-            encMsg[i+1] = "";
-            encMsg[i+2] = "";
-            encMsg[i+3] = "";
-        } 
-    }
-    mensaje = encMsg.join('')
-    document.getElementById("msg").value = mensaje;
+function decryptMsg() {
+    console.time('timerName');
+    let decrypted = document.getElementById("input-text").value;
+    document.getElementById("input-text").value = "";
+    decrypted = decrypted.replace(/enter/g, "e");
+    decrypted = decrypted.replace(/imes/g, "i");
+    decrypted = decrypted.replace(/ai/g, "a");
+    decrypted = decrypted.replace(/ober/g, "o");
+    decrypted = decrypted.replace(/ufat/g, "u");
+    document.getElementById("output-text").value = decrypted;
+    console.timeEnd('timerName');
 }
 
 /* Reglas de desencriptación: 
@@ -75,12 +47,9 @@ No se permite acentuación de palabras
 */
 
 function copy(){
-    var copiedMsg = document.getElementById("msg").value;
+    let copiedMsg = document.getElementById("output-text").value;
     navigator.clipboard.writeText(copiedMsg)
     .then(() => {
         alert("Copiado!");
-    })
-    .catch(err => {
-        alert("Ups.. Algo salio mal :(");
-    })
+    });
 }
